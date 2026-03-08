@@ -4,7 +4,7 @@ Downloader CLI for Myrient website. Wrote this over a weekend during the final m
 <img width="942" height="208" alt="image" src="https://github.com/user-attachments/assets/4f883373-3ea0-4e6c-a747-be189c633395" />
 <br/><br/>
 
-Execuatables are available for Linux (x64 and arm64), Windows (x64), and MacOS (x64 and arm64).
+Executables are available for Linux (x64 and arm64), Windows (x64), and MacOS (x64 and arm64).
 
 # Usage
 Run the executable. There will be two subsequent prompts for inputting both the Myrient files directory path you wish to download, as well as the output path were the files should be downloaded.
