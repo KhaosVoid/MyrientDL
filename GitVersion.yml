@@ -1,0 +1,39 @@
+mode: ContinuousDeployment
+next-version: 'v1.0.0'
+assembly-versioning-format: '{Major}.{Minor}.{Patch}'
+assembly-file-versioning-format: '{Major}.{Minor}.{Patch}{PreReleaseTagWithDash}'
+increment: Inherit
+tag-prefix: '[vV]'
+major-version-bump-message: '\+semver:\s?(breaking|major)'
+minor-version-bump-message: '\+semver:\s?(feature|minor)'
+patch-version-bump-message: '\+semver:\s?(fix|patch)'
+no-bump-message: '\+semver:\s?(none|skip)'
+tag-pre-release-weight: 60000
+commit-message-incrementing: Enabled
+ignore: 
+  sha: []
+merge-message-formats: {}
+update-build-number: true
+
+branches: 
+  main:
+    regex: ^(main)$
+    mode: ContinuousDeployment
+    increment: Patch
+    prevent-increment:
+      of-merged-branch: true
+    track-merge-target: false
+    tracks-release-branches: false
+    is-main-branch: true
+    is-release-branch: false
+  dev:
+    regex: ^(?!(main))
+    mode: ContinuousDeployment
+    label: beta
+    increment: Patch
+    prevent-increment:
+      of-merged-branch: true
+    track-merge-target: true
+    tracks-release-branches: true
+    is-main-branch: false
+    is-release-branch: false
